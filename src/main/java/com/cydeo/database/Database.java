@@ -1,2 +1,4 @@
-package com.cydeo.database;public class Database {
+package com.cydeo.database;
+
+public class Database {
 }

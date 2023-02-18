@@ -1,2 +1,4 @@
-package com.cydeo.entity;public class School {
+package com.cydeo.entity;
+
+public class School {
 }

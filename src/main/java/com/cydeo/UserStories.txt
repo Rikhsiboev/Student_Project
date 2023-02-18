@@ -1,0 +1,58 @@
+US1
+
+a.School should have a list of students and courses, a unique id and name,
+
+b. Common states should be located in a BaseEntity.
+
+School list should be dynamic, any number of schools could be created.
+
+All CRUD operations should be done via schoolService,
+
+Service should implement a common generic CRUDService.
+
+All school data should be kept in Database (Database Class for this time)
+
+US2
+
+a. Course should have a unique id and name and a treshold score to pass,
+
+b. Course days should be created among weekdays. c. Common states should be located in a BaseEntity.
+
+All CRUD operations should be done via courseService.
+
+Service should implement a common generic CRUDService.
+
+All Course data should be kept in Database (Database Class for this time)
+
+Course list should be dynamic, any number of schools could be created.
+
+US3
+
+a. Student should have a unique id and studentNumber
+
+b. All Students should have a firstname, lastname, parent and Courses fields.                                                                                                                                          c. Common states should be located in a BaseEntity.
+
+All CRUD operations should be done via studentService.
+
+Service should implement a common generic CRUDService.
+
+All Student data should be kept in Database (Database Class for this time)
+
+US4
+
+a. Parent should have a unique id and firstname, lastname,
+
+b. Common states should be located in a BaseEntity.
+
+Parent list should be dynamic, any number of parents could be created.
+
+All CRUD operations should be done via parentService.
+
+Service should implement a common generic CRUDService.
+
+All school data should be kept in Database (Database Class for this time)
+
+Course list should be dynamic, any number of schools could be created.
+
+
+

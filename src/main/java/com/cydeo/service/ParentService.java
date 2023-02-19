@@ -10,8 +10,8 @@ import java.util.UUID;
 public class ParentService implements CRUDService<Parent>{
 
     @Override
-    public void save(Parent entity) {
-
+    public boolean save(Parent entity) {
+        return false;
     }
 
     @Override

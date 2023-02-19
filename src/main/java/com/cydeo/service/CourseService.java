@@ -16,8 +16,8 @@ public class CourseService implements CRUDService<Course> {
         return COURSE_LIST;
     }
     @Override
-    public void save(Course course) {
-        getAll().add(course);
+    public boolean save(Course course) {
+        return getAll().add(course);
     }
 
     @Override

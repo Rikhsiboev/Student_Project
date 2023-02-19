@@ -23,8 +23,9 @@ public class SchoolService implements CRUDService<School>{
 
 
     @Override
-    public void save(School school) {
+    public boolean save(School school) {
         getAll().add(school);
+        return true;
     }
 
     @Override

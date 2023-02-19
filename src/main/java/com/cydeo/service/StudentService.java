@@ -16,13 +16,17 @@ public class StudentService implements CRUDService<Student>{
         return STUDENT_LIST;
     }
     @Override
-    public void save(Student student) {
-        getAll().add(student);
+    public boolean save(Student student) {
+        return getAll().add(student);
     }
 
     @Override
-    public void update(UUID id, Student entity) throws InstanceNotFoundException {
-
+    public void update(UUID id, Student student) throws InstanceNotFoundException {
+        if(findIndex(id)>=0){
+            getAll().set(findIndex(id),student);
+        }else{
+            throw new InstanceNotFoundException();
+        }
     }
 
     @Override
@@ -33,6 +37,16 @@ public class StudentService implements CRUDService<Student>{
     @Override
     public Student getById(UUID id) throws InstanceNotFoundException {
         return null;
+    }
+    private static int findIndex(UUID id){
+        int index = -1;
+        for (int i = 0; i < STUDENT_LIST.size(); i++) {
+            if(STUDENT_LIST.get(i).getId().toString().equals(id.toString())){
+                index=i;
+                break;
+            }
+        }
+        return index;
     }
 
 

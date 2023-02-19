@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class BaseEntity {
+public abstract class BaseEntity {
 
     private int id;
 

@@ -18,6 +18,9 @@ public class SchoolMainRunner {
 
         CRUDService<Student> studentService = new StudentService();
         CRUDService<Course> courseService = new CourseService();
+        CRUDService<School> schoolService = new SchoolService();
+        CRUDService<Parent> parentService = new ParentService();
+
 
 
         Scanner input = new Scanner(System.in);

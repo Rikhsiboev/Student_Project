@@ -14,6 +14,4 @@ public abstract class BaseEntity {
 
 
 
-
-
 }

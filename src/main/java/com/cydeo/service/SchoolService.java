@@ -57,5 +57,4 @@ public class SchoolService implements CRUDService<School> {
         return index;
     }
 
-
 }

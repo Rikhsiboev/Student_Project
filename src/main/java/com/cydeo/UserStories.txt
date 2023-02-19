@@ -1,6 +1,6 @@
 US1
 
-a.School should have a list of students and courses, a unique id and name,
+a.School should have a list of students and courses, a unique id and name,+
 
 b. Common states should be located in a BaseEntity.
 
@@ -10,13 +10,15 @@ All CRUD operations should be done via schoolService,
 
 Service should implement a common generic CRUDService.
 
-All school data should be kept in Database (Database Class for this time)
+All school data should be kept in Database (Database Class for this time)+
 
 US2
 
 a. Course should have a unique id and name and a treshold score to pass,
 
-b. Course days should be created among weekdays. c. Common states should be located in a BaseEntity.
+b. Course days should be created among weekdays.
+
+c. Common states should be located in a BaseEntity.
 
 All CRUD operations should be done via courseService.
 

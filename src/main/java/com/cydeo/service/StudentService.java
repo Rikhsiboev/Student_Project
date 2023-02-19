@@ -7,11 +7,17 @@ import javax.management.InstanceNotFoundException;
 import java.util.List;
 import java.util.UUID;
 
+import static com.cydeo.database.Database.*;
+
 public class StudentService implements CRUDService<Student>{
 
     @Override
-    public void save(Student entity) {
-
+    public List<Student> getAll() {
+        return STUDENT_LIST;
+    }
+    @Override
+    public void save(Student student) {
+        getAll().add(student);
     }
 
     @Override
@@ -29,8 +35,5 @@ public class StudentService implements CRUDService<Student>{
         return null;
     }
 
-    @Override
-    public List<Student> getAll() {
-        return null;
-    }
+
 }

@@ -1,15 +1,13 @@
 package com.cydeo.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.UUID;
 
 
 @Setter
 @Getter
+@ToString
 public class Parent extends BaseEntity{
 
     private String firstName, lastName;

@@ -21,6 +21,7 @@ public class SchoolService implements CRUDService<School>{
                 .findAny().orElseThrow(InstanceNotFoundException::new);
     }
 
+
     @Override
     public void save(School school) {
         getAll().add(school);

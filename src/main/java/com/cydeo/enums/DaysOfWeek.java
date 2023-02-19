@@ -2,11 +2,12 @@ package com.cydeo.enums;
 
 public enum DaysOfWeek {
 
-    MONDAY("Monday"), TUESDAY("Tuesday");
+    MONDAY("Monday"), TUESDAY("Tuesday"), WEDNESDAY("Wednesday"),
+    THURSDAY("Thursday") , FRIDAY("Friday");
 
-    String str;
+    String value;
 
     DaysOfWeek(String str) {
-        this.str = str;
+        this.value = str;
     }
 }

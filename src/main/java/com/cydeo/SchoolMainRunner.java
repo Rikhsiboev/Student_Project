@@ -1,2 +1,4 @@
-package com.cydeo;public class SchoolMainRunner {
+package com.cydeo;
+
+public class SchoolMainRunner {
 }

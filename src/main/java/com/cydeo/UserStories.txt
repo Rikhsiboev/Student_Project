@@ -57,6 +57,7 @@ All school data should be kept in Database (Database Class for this time)
 Course list should be dynamic, any number of schools could be created.
 
 US 5
+
 a. Teacher should have a unique id and firstname, lastname, phone number, salary, school and list of courses
 
 b. Common states should be located in a BaseEntity.

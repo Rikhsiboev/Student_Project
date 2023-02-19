@@ -1,6 +1,5 @@
 package com.cydeo.service;
 
-import static com.cydeo.database.Database.*;
 import static com.cydeo.database.Database.SCHOOL_LIST;
 
 import com.cydeo.entity.School;
@@ -9,43 +8,43 @@ import javax.management.InstanceNotFoundException;
 import java.util.List;
 import java.util.UUID;
 
-public class SchoolService implements CRUDService<School>{
+public class SchoolService implements CRUDService<School> {
 
 
-    @Override
-    public List<School> getAll() {
-        return SCHOOL_LIST;
-    }
-
-    public School getById(UUID id) throws InstanceNotFoundException {
-        return getAll().stream()
+    public School findById(UUID id) throws InstanceNotFoundException {
+        return findAll().stream()
                 .filter(p -> p.getId().toString().equals(id.toString()))
                 .findAny().orElseThrow(InstanceNotFoundException::new);
     }
-
+    @Override
+    public List<School> findAll() {
+        return SCHOOL_LIST;
+    }
 
     @Override
     public void save(School school) {
-        getAll().add(school);
+        findAll().add(school);
     }
 
     @Override
-    public void update(UUID id ,School school) throws InstanceNotFoundException {
-        if(findIndex(id)>=0){
-            getAll().set(findIndex(id),school);
+    public void update(School school) throws InstanceNotFoundException {
+        if(findIndex(school.getId())>=0){
+            findAll().set(findIndex(school.getId()),school);
         }else{
             throw new InstanceNotFoundException();
         }
     }
 
+
     @Override
-    public void delete(UUID id) throws InstanceNotFoundException {
+    public void deleteById(UUID id) throws InstanceNotFoundException {
         if(findIndex(id)>=0){
-            getAll().remove(findIndex(id));
+            findAll().remove(findIndex(id));
         }else{
             throw new InstanceNotFoundException();
         }
     }
+
 
     private static int findIndex(UUID id){
         int index = -1;
@@ -58,23 +57,5 @@ public class SchoolService implements CRUDService<School>{
         return index;
     }
 
-    @Override
-    public School findById(int id) {
-        return null;
-    }
 
-    @Override
-    public List<School> findAll() {
-        return null;
-    }
-
-    @Override
-    public void update(School school) {
-
-    }
-
-    @Override
-    public void deleteById(int id) {
-
-    }
 }

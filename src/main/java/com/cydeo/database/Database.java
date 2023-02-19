@@ -10,7 +10,6 @@ public class Database {
 
     /*
     Initial data for Courses
-
     public static List<Course> courseList = new ArrayList<>(List.of(
             new Course(1,"English", 40, List.of(WeekDays.MONDAY, WeekDays.THURSDAY)),
             new Course(2,"Math",50, List.of(WeekDays.values())),

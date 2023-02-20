@@ -1,15 +1,15 @@
 package com.cydeo.entity;
 
+
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
-@Getter
+@Data
 public abstract class BaseEntity {
+
     private int id;
     private int courseId;
 

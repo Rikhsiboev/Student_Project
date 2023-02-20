@@ -7,11 +7,19 @@ import javax.management.InstanceNotFoundException;
 import java.util.List;
 import java.util.UUID;
 
+import static com.cydeo.database.Database.*;
+
 public class ParentService implements CRUDService<Parent>{
 
+
     @Override
-    public boolean save(Parent entity) {
-        return false;
+    public List<Parent> getAll() {
+        return PARENT_LIST;
+    }
+
+    @Override
+    public boolean save(Parent parent) {
+        return getAll().add(parent);
     }
 
     @Override
@@ -29,8 +37,5 @@ public class ParentService implements CRUDService<Parent>{
         return null;
     }
 
-    @Override
-    public List<Parent> getAll() {
-        return null;
-    }
+
 }

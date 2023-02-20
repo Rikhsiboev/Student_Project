@@ -14,14 +14,17 @@ public class School extends BaseEntity{
 
     private String name;
 
-    private List<Student> students;
+    private List<UUID> studentsUUID;
 
-    private List<Student> courses;
+    private List<UUID> coursesUUID;
 
-    public School(UUID id, String name, List<Student> students, List<Student> courses) {
+    private List<UUID> teachersUUID;
+
+    public School(UUID id, String name, List<UUID> studentsUUID, List<UUID> coursesUUID, List<UUID> teachersUUID) {
         super(id);
         this.name = name;
-        this.students = students;
-        this.courses = courses;
+        this.studentsUUID = studentsUUID;
+        this.coursesUUID = coursesUUID;
+        this.teachersUUID = teachersUUID;
     }
 }

@@ -6,6 +6,8 @@ import com.cydeo.service.CRUDService;
 import com.cydeo.service.*;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.UUID;
 import java.util.function.Consumer;
@@ -26,7 +28,7 @@ public class SchoolMainRunner {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("How many Students you want to Generate?");
+        System.out.println("How many Students with parents you want to Generate?");
         int howManyStudents = input.nextInt();
         for (int i = 0; i < howManyStudents; i++) {
             Student student = generateStudent();
@@ -69,10 +71,15 @@ public class SchoolMainRunner {
                         String firstNameStudent = input.next();
                         System.out.print("Student Last Name:");
                         String lastNameStudent = input.next();
-                        System.out.print("Parent First Name:");
-                        String firstNameParent = input.next();
+                        System.out.print("Parent 1 First Name:");
+                        String firstNameParent1 = input.next();
+                        System.out.print("Parent 2 First Name:");
+                        String firstNameParent2 = input.next();
+                        Parent paren1 = new Parent(UUID.randomUUID(),firstNameParent1,lastNameStudent);
+                        Parent paren2 = new Parent(UUID.randomUUID(),firstNameParent2,lastNameStudent);
                         isSucsessful = false;
-                        isSucsessful = studentService.save(new Student(UUID.randomUUID(), firstNameStudent, lastNameStudent, new Parent(UUID.randomUUID(), firstNameParent, lastNameStudent)));
+                        isSucsessful = studentService.save(new Student(UUID.randomUUID(), firstNameStudent, lastNameStudent,
+                                Arrays.asList(paren1.getId(),paren2.getId())));
                         if (isSucsessful)
                             System.out.println("Success");
                         System.out.println("Would you like to add more students? 1-yes 0-no");

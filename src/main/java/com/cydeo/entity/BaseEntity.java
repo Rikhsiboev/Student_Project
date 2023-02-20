@@ -12,5 +12,4 @@ public abstract class BaseEntity {
 
     UUID id;
 
-
 }

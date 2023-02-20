@@ -4,8 +4,6 @@ import com.cydeo.entity.Course;
 
 import java.util.List;
 
-import static com.cydeo.database.Database.COURSE_LIST;
-
 public class CourseService implements CRUDService<Course> {
 
 

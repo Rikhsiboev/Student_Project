@@ -8,10 +8,6 @@ import static com.cydeo.database.Database.COURSE_LIST;
 
 public class CourseService implements CRUDService<Course> {
 
-    public List<Course> getAll(){
-        return COURSE_LIST;
-    }
-
 
     @Override
     public Course findById(int id) {

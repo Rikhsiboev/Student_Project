@@ -1,11 +1,11 @@
 package com.cydeo.entity;
 
 import com.cydeo.enums.DaysOfWeek;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+@Data
+@NoArgsConstructor
 public class Course extends BaseEntity {
 
     private String courseName;

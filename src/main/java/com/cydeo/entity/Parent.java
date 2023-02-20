@@ -17,8 +17,6 @@ public class Parent extends BaseEntity {
     private String firstName;
     private String lastName;
 
-    List<Parent> parentList = new ArrayList<>(); // <- Dynamic Parent LIST (?)
-
 
     public Parent(int id, String firstName, String lastName) {
         super(id);

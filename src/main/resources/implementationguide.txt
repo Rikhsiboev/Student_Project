@@ -21,3 +21,26 @@
 *Branch management and merging process is important. Pay attention.
 
 *Whenever you need any help, do not hesitate to reach me.
+*Before writing code, check the Common git&github update cycle image provided in the discord group channel.
+
+*Write your codes in your own branch.
+
+*Main responsibility for all developers is implementing all CRUD methods successfully.
+
+*We are going to merge our codes in the master branch, after review. (for the master branch we should ask for 2 reviewers).
+
+*How to create implementation classes and methods?
+
+        Example:
+            public class CourseService implements CRUDService<Course> {
+                @Override
+                public Course findById(int id) {
+                    return Database.courseList.stream()
+                            .filter(course -> course.id == id)
+                            .findFirst().orElseThrow();
+                }
+            }
+
+*Branch management and merging process is important. Pay attention.
+
+*Whenever you need any help, do not hesitate to reach me.

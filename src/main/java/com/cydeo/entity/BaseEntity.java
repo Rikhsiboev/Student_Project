@@ -11,9 +11,5 @@ import lombok.NoArgsConstructor;
 public abstract class BaseEntity {
 
     private int id;
-    private int courseId;
 
-    public BaseEntity(int courseId) {
-        this.courseId = courseId;
-    }
 }

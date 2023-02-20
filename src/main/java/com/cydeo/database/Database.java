@@ -13,8 +13,6 @@ import java.util.List;
 
 public class Database {
 
-    public static final List<Course> COURSE_LIST = new ArrayList<>();
-
     /*
     Initial data for Courses
     public static List<Course> courseList = new ArrayList<>(List.of(

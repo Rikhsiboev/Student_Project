@@ -12,4 +12,20 @@ public class Course extends BaseEntity {
 
     public Course(int id, String name, int price, List<DaysOfWeek> weekDays) {
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public List<DaysOfWeek> getWeekDays() {
+        return weekDays;
+    }
 }

@@ -19,7 +19,7 @@ public class ParentService implements CRUDService<Parent> {
 
     @Override
     public List<Parent> findAll() {
-        return null;
+        return Database.parentList;
     }
 
     @Override

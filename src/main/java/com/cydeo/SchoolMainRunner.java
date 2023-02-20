@@ -1,5 +1,6 @@
 package com.cydeo;
 
+
 import com.cydeo.entity.*;
 import com.cydeo.service.CRUDService;
 import com.cydeo.service.TeacherService;
@@ -13,8 +14,4 @@ public class SchoolMainRunner {
 //         CRUDService<Student> studentService = new StudentService();
 //         CRUDService<Teacher> teacherService= new TeacherService();
     }
-
-
-
-
 }

@@ -11,5 +11,4 @@ import lombok.NoArgsConstructor;
 public abstract class BaseEntity {
 
     private int id;
-
 }

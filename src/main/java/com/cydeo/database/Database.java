@@ -46,6 +46,4 @@ public class Database {
             new Teacher(1, "Michael", "Smith", "(212)456-7423)", BigDecimal.valueOf(100000),schoolList.get(0), courseList),
             new Teacher(2, "Mary", "Martinez", "(416)245-6369)", BigDecimal.valueOf(110000),schoolList.get(1), courseList)
     ));*/
-
-
 }

@@ -2,7 +2,9 @@ package com.cydeo.service;
 
 import java.util.List;
 
-public interface CRUDService<T>{
+
+// All method we have to write here as generic
+public interface CRUDService<T> {
 
     T findById(int id);
 
@@ -15,3 +17,4 @@ public interface CRUDService<T>{
     void deleteById(int id);
 
 }
+

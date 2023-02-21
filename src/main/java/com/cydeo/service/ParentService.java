@@ -24,16 +24,19 @@ public class ParentService implements CRUDService<Parent> {
 
     @Override
     public void save(Parent parent) {
-
+        Database.parentList.add(parent);
     }
 
     @Override
     public void update(Parent parent) {
-
+        deleteById(parent.getId());
+        Database.parentList.add(parent);
     }
 
     @Override
     public void deleteById(int id) {
+        Parent byId = findById(id);
+        Database.parentList.remove(byId);
 
     }
 }

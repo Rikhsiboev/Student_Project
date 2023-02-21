@@ -5,6 +5,7 @@ import com.cydeo.entity.School;
 import static com.cydeo.database.Database.*;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class SchoolService implements CRUDService<School>{
 
@@ -12,7 +13,8 @@ public class SchoolService implements CRUDService<School>{
     public School findById(int id){
         return findAll().stream()
                 .filter(p -> p.getId()==id)
-                .findAny().get();
+                .findAny()
+                .orElseThrow(() -> new NoSuchElementException("No School With Matching ID --> " + id));
     }
 
     @Override

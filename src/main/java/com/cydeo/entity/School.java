@@ -1,12 +1,10 @@
 package com.cydeo.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.List;
 
-@Getter
-@Setter
+@Data
 public class School extends BaseEntity{
 
     private String name;

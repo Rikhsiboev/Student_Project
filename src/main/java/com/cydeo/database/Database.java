@@ -38,13 +38,13 @@ public class Database {
     ));*/
 
 
-    /*Initial data for Students
+    //Initial data for Students
     public static List<Student> studentList = new ArrayList<>(List.of(
             new Student(1, 12345L, "Jayne", "Smith", parentList.get(0),schoolList.get(0), courseList),
             new Student(2, 12346L, "Candy", "Brown", parentList.get(1),schoolList.get(1), courseList)
 
 
-    ));*/
+    ));
 
     /*Initial data for teachers
     public static List<Teacher> teacherList = new ArrayList<>(List.of(

@@ -1,35 +1,36 @@
 package com.cydeo.service;
 
+import com.cydeo.database.Database;
 import com.cydeo.entity.Teacher;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TeacherService implements CRUDService<Teacher> {
     @Override
     public Teacher findById(int id) {
-        // TODO: 2/19/2023 use stream if possible
-        return null;
-    }
+        return  Database.teacherList.stream().filter(teacher -> teacher.getId() == id).findFirst()
+                .orElseThrow(() -> new RuntimeException("Teacher not found"));
+    };
 
     @Override
     public List<Teacher> findAll() {
-        // TODO: 2/19/2023 use stream if possible
-        return null;
+
+        return Database.teacherList.stream().collect(Collectors.toList());
     }
 
     @Override
     public void save(Teacher teacher) {
-        // TODO: 2/19/2023 use stream if possible
-
+        Database.teacherList.add(teacher);
     }
 
     @Override
     public void update(Teacher teacher) {
-        // TODO: 2/19/2023 use stream if possible
+      Database.teacherList.set(Database.teacherList.indexOf(teacher), teacher);
     }
 
     @Override
     public void deleteById(int id) {
-        // TODO: 2/19/2023 use stream if possible
+       Database.teacherList.removeIf(teacher -> teacher.getId() == id);
     }
 }

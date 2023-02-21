@@ -14,7 +14,7 @@ public class SchoolService implements CRUDService<School>{
         return findAll().stream()
                 .filter(p -> p.getId()==id)
                 .findAny()
-                .orElseThrow(() -> new NoSuchElementException("No School With Matching ID --> " + id));
+                .orElseThrow(NoSuchElementException::new);
     }
 
     @Override

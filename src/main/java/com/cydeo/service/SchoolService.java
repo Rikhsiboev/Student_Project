@@ -9,7 +9,6 @@ import java.util.NoSuchElementException;
 
 public class SchoolService implements CRUDService<School>{
 
-
     public School findById(int id){
         return findAll().stream()
                 .filter(p -> p.getId()==id)
@@ -26,7 +25,6 @@ public class SchoolService implements CRUDService<School>{
     public void save(School school) {
         findAll().add(school);
     }
-
 
     @Override
     public void update(School school) {
